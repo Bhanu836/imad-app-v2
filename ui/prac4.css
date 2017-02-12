@@ -32,7 +32,7 @@ left:0;
 right:70%
 }
 table{
-border= 2px solid blue;
+
 }
 #line{
 width:100%;
@@ -42,7 +42,7 @@ font-family:sans serif;
 left:40px;
 text-align:left;
 margin:8px;
-font-size=150%;
+font-size:150%;
 padding:5px;
 }
 
@@ -84,7 +84,7 @@ background-color:#111;
 .overlay-content {
     position: relative;
     top: 25%;
-    width: 100
+    width: 100;
 	
     text-align: center;
     margin-top: 30px;
@@ -124,4 +124,4 @@ cursor:pointer
     font-size: 40px;
     top: 15px;
     right: 35px;
-  }
+  }}
