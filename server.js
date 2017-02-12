@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
+app.get('/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
@@ -15,6 +15,15 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+app.get('/',function(req,res){
+ res.sendFile(path.join(__dirname,'practice4.html'));
+});
+app.get('/practice4.js',function(req,res){
+ res.sendFile(path.join(__dirname,'practice4.js'));
+});
+app.get('/prac4.css',function(req,res){
+ res.sendFile(path.join(__dirname,'prac4.css'));
 });
 
 
