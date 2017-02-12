@@ -1,8 +1,8 @@
 <!doctype HTML>
 <html ng-app="bookstore">
   <head>
-<link rel="stylesheet" href="prac4.css">
-<script type="text/javascript" src="angular.min.js"></script>
+<link rel="stylesheet" href="ui/prac4.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   
 </head>
     <body ng-controller="mycontroller as ctrl">
@@ -35,11 +35,11 @@
 			</li>
           </ul>
 		 <div id="line" >
-		  <div id="line" ng-repeat="critics in ctrl.cinema"">
+		  <div id="line" ng-repeat="critics in ctrl.cinema">
 		  <div ng-show="numb.isSet(1)"><STRONG>MOVIE NAME :</STRONG>{{critics.MOVIE_NAME}}</div>
-		  <div ng-show="numb.isSet(2)"><STRONG>PEOPLE VIEWS :</STRONG> {{critics.MOVIE_NAME}} </BR>{{critics.REVIEW}}</div>
-		  <div ng-show="numb.isSet(3)"><STRONG> STARS :</STRONG>{{critics.MOVIE_NAME}}</BR>{{critics.STARS}}</div><HR></div>
-		  <div ng-show="numb.isSet(3)"><STRONG> STARS :</STRONG>{{critics.MOVIE_NAME}}</BR>{{critics.STARS}}<HR></div>
+		  <div ng-show="numb.isSet(2)"><STRONG>PEOPLE VIEWS :</STRONG> {{critics.MOVIE_NAME}} <BR>{{critics.REVIEW}}</div>
+		  <div ng-show="numb.isSet(3)"><STRONG> STARS :</STRONG>{{critics.MOVIE_NAME}}<BR>{{critics.STARS}}</div><HR></div>
+		  <div ng-show="numb.isSet(3)"><STRONG> STARS :</STRONG>{{critics.MOVIE_NAME}}<BR>{{critics.STARS}}<HR></div>
 		  </div>
 		  </section></div>
         <div id="content" ng-controller="formCtrl as bhai" ng-init="review.name='bhanu'">
@@ -53,7 +53,7 @@
 		      
 		  
 	        </table></form></center>
-			  <div > <strong>hi !! {{review.name}}</strong></br>
+			  <div > <strong>hi !! {{review.name}}</strong><br>
 	               yaour email <strong> {{review.email}}</strong> and Book name is <strong>{{review.bookname}}</strong>
 				   </div>
 	 </div>
