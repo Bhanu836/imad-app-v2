@@ -127,6 +127,7 @@ cursor:pointer
   }}
   
   #heart{
+      z-index:10;
       position:absolute;
       right:8px;
       display:block;
