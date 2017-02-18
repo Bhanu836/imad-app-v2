@@ -21,8 +21,8 @@
  this.cinema = sochfilmki;
  this.place =function(){
 					
-				
-					this.cinema.push({MOVIE_NAME:this.review.name});
+				     this.cinema.push({REVIEW:this.review.review_a});
+					this.cinema.push({MOVIE_NAME:this.review.bookname});
 					};
 					
  });
