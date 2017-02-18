@@ -30,7 +30,7 @@
 					this.count =function(){
 					    
 					    this.countv = this.countv +1;
-					}
+					};
 					
  });
  		 
