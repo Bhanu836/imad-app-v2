@@ -37,7 +37,7 @@
 		 <div id="line" >
 		  <div id="line" ng-repeat="critics in ctrl.cinema">
 		  <div ng-show="numb.isSet(1)"><STRONG>MOVIE NAME :</STRONG>{{critics.MOVIE_NAME}}</div>
-		  <div ng-show="numb.isSet(2)"><STRONG> PEOPLE VIEWS for MOVIE {{critics.MOVIE_NAME}} :</STRONG>{{critics.REVIEW}}</div>
+		  <div ng-show="numb.isSet(2)"><STRONG> PEOPLE VIEWS on book ' {{critics.MOVIE_NAME}} ' :</STRONG>{{critics.REVIEW}}</div>
 		  <div ng-show="numb.isSet(3)"><STRONG> STARS for movie {{critics.MOVIE_NAME}}:</STRONG> {{critics.STARS}}</div><hr></div>
 		  
 		  </div>
@@ -49,6 +49,7 @@
              <tr><td>NAME :</td><TD><input type="text" ng-model="ctrl.review.name"  required></td></tr>
 			    <tr><td>EMAIL :</td><td><input type="text" ng-model="ctrl.review.email"></td></tr>
 			    <tr><tD>BOOK NAME:</tD><td><input type="text" ng-model="ctrl.review.bookname" required></td></tr>
+			     <tr><tD>BOOK NAME:</tD><td><input type="number" ng-model="ctrl.review.stars" required></td></tr>
 			    <tr><tD>YOUR VALUABLE REVIEW::</tD><td><textarea type="text" ng-model="ctrl.review.review_a" required></textarea></td></tr>
 			    <tr><td></td><td><input type="submit"></td></tr>
 		      
