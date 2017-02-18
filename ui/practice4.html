@@ -37,12 +37,12 @@
 		 <div id="line" >
 		  <div id="line" ng-repeat="critics in ctrl.cinema">
 		  <div ng-show="numb.isSet(1)"><STRONG>MOVIE NAME :</STRONG>{{critics.MOVIE_NAME}}</div><HR>
-		  <div ng-show="numb.isSet(2)"><STRONG> PEOPLE VIEWS FOR {{critics.MOVIE_NAME}} >> :</STRONG>  : --- {{critics.REVIEW}}</div><HR>
-		  <div ng-show="numb.isSet(3)"><STRONG> STARS FOR {{critics.MOVIE_NAME}}::</STRONG> >{{critics.STARS}}</div><hr></div>
+		  <div ng-show="numb.isSet(2)"><STRONG> PEOPLE VIEWS FOR {{critics.MOVIE_NAME}}  :</STRONG>  : --- {{critics.REVIEW}}</div><HR>
+		  <div ng-show="numb.isSet(3)"><STRONG> STARS FOR {{critics.MOVIE_NAME}}::</STRONG> {{critics.STARS}}</div><hr></div>
 		  
 		  </div>
 		  </section></div>
-        <div id="content" ng-controller="formCtrl as bhai" ng-init="review.name='bhanu'">
+        <div id="content" ng-controller="formCtrl as bhai" >
                   content 
 				
 	     <center>  <form id="form" ng-submit="ctrl.place()" ><table> 
