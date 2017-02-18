@@ -26,6 +26,11 @@
 						
 					
 					};
+					this.countv = 0;
+					this.count =function(){
+					    
+					    this.countv = this.countv +1;
+					}
 					
  });
  		 
