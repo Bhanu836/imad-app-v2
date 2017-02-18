@@ -37,8 +37,8 @@
 		 <div id="line" >
 		  <div id="line" ng-repeat="critics in ctrl.cinema">
 		  <div ng-show="numb.isSet(1)"><STRONG>MOVIE NAME :</STRONG>{{critics.MOVIE_NAME}}</div>
-		  <div ng-show="numb.isSet(2)"><STRONG>PEOPLE VIEWS :</STRONG> {{critics.MOVIE_NAME}} <BR>{{critics.REVIEW}}</div>
-		  <div ng-show="numb.isSet(3)"><STRONG> STARS :</STRONG>{{critics.MOVIE_NAME}}<BR>{{critics.STARS}}<hr></div></div>
+		  <div ng-show="numb.isSet(2)"><STRONG>PEOPLE VIEWS :</STRONG> {{critics.MOVIE_NAME}} : --- {{critics.REVIEW}}</div>
+		  <div ng-show="numb.isSet(3)"><STRONG> STARS :</STRONG>{{critics.MOVIE_NAME}}: >{{critics.STARS}}</div><hr></div>
 		  
 		  </div>
 		  </section></div>
