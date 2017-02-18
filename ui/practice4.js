@@ -19,6 +19,12 @@
  app.controller("mycontroller",function(){
  
  this.cinema = sochfilmki;
+ this.place =function(){
+					
+				
+					this.cinema.push({MOVIE_NAME:this.review.name});
+					};
+					
  });
  		 
 		  app.controller("tabController",function(){
