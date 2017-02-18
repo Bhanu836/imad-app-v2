@@ -38,7 +38,7 @@
 					this.isSet= function(valName){
 					  return this.numb === valName;
 					};
-					this.countv = 0;
+					this.cv = 0;
 						this.count =function(){
 					    
 					    this.countv = this.countv + 1;
