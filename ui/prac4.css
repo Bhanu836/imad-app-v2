@@ -126,6 +126,7 @@ cursor:pointer
     right: 35px;
   }}
   
-  #id{
+  #heart{
+      position:absolute;
       right:8px;
   }
