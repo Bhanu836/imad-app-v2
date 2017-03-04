@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background:lightyelow;
+   
     background-image: url(http://www.uglydogbooks.com/wp-content/uploads/2014/04/books.jpg);
    
     overflow:auto;
@@ -63,7 +63,7 @@ input[type=text],[type=number]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    background-color: #f8f8f8;
+  
    
      border: 3px solid black;
       border-radius: 12px;
@@ -71,8 +71,8 @@ input[type=text],[type=number]{
 }
  input[type=submit] {
      width:30%;
-    background-color:#00ABAB;
-    border: none;
+    
+    border: 3px solid black;
     color: white;
     padding: 16px 32px;
     
@@ -171,7 +171,7 @@ cursor:pointer
     border: 2px solid black;
     border-radius: 12px;
      margin: 8px 0;
-    background-color: #f8f8f8;
-    resize: none;
+   
+    
 }
 
