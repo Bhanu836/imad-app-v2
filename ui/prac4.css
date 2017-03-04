@@ -9,7 +9,7 @@
     background-image: url(https://lh3.googleusercontent.com/utePymdsYpLRyBGYX7JQ27cy0bx7NnAH-ak1d9_ETtH6-p_fl9-KmXytyoMADc86JbQk1quIS92_h5YQ9KFkdcPvfA_QKdQIg50E2xSgZyk5sv8HYCqwM9LaGRY41gED93PDr9YsFBiFt-EMyYaTriPD2QM8pyfXZ98za5Ac8I_dvEN011HrXN1993IBA5dq0AJMNv01VmP6a-_-pTa_bB-FOIPsXbLlCHjIFxOQszLXAEDX4PgORPTBeVTbPi18FJSNOGeZCMBmMzGRjVpc0umm88qzZSZF8gAIricahZAXyQWr6gX5cm4o48LZNI0-I2cjWHjB_nIc9_4kobZWqeLZ230a11hRBl3FJvjzBi_4h9AGej6gp-YiIJrLMTweUvHwltGtMvq5XY_Yf4phB3TYKsalaCi6WlSmVV-Mu2VawlDOSU0tiNeaeLDTy-scT4zIQU9AOxkS74Sk1WmML8K19Rk-g42h8B87UgY5o43gO1tEblJKfyE7EGx2v52rD3wCSkFUt3Y1YyKpT-94O_K3Ez9Kmh6ZfsDOJUAIblRBNEgdILsP3xwidCo7PQLwpWUoRgAuC0XUTIlrezWreGIa-7vXUuqcV_r8JKvmBPX1YKx481Xu5Sd6hLE6QmOJEmasE14-bSHIuNYkgElpW9Tv2eMTPu_A7P6dRCmQUA=w883-h662-no);
     background-repeat:repeat-y;
     background-position: center;
-    background-size: cover;
+    background-size:100%;
 }
 
 #content {
@@ -20,7 +20,7 @@
     width: 100%;
     color: #111;
     font-family:sans serif;
-    font-size:24px;
+    font-size:54px;
     height:100%;
 	text-align:center;
 }
