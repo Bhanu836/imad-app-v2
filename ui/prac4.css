@@ -71,9 +71,9 @@ input[type=text],[type=number]{
 }
  input[type=submit] {
      width:30%;
-    background-color:#DFDF03;
+    background-color:#058973;
     border: 1px solid black;
-    color: black;
+    color: white;
     padding: 16px 32px;
     border-radius: 12px;
     margin: 4px 2px;
