@@ -9,7 +9,7 @@
     background-image: url(http://www.uglydogbooks.com/wp-content/uploads/2014/04/books.jpg);
     background-repeat:repeat-y;
     background-position: center;
-    background-size:100%;
+    overflow:auto;
 }
 
 #content {
