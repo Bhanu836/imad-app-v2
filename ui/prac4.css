@@ -70,7 +70,7 @@ input[type=text],[type=number]{
       border-radius: 4px;
       height:200%;
 }
-input input[type=submit] {
+ input[type=submit] {
     background-color: #4CAF50;
     border: none;
     color: white;
