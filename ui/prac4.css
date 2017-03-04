@@ -8,8 +8,7 @@
     left: 0;
     background:lightyelow;
     background-image: url(http://www.uglydogbooks.com/wp-content/uploads/2014/04/books.jpg);
-    background-repeat:repeat-x;
-    background-position: center;
+   
     overflow:auto;
 }
 
@@ -96,7 +95,7 @@ li a:hover{
 background-color:#111;
 }
 .me{
-     color:#522E74;
+     color:lightyellow;
     font-size:300%;
 }
 .overlay {
