@@ -70,7 +70,8 @@ input[type=text],[type=number]{
       height:100%;
 }
  input[type=submit] {
-    background-color:lightblue;
+     width:100%;
+    background-color:blue;
     border: none;
     color: white;
     padding: 16px 32px;
