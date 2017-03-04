@@ -71,11 +71,11 @@ input[type=text],[type=number]{
 }
  input[type=submit] {
      width:30%;
-    backgound-color:#553750;
-    border: 3px solid black;
+    backgound-color:#DFDF03;
+    border: 1px solid black;
     color: black;
     padding: 16px 32px;
-    
+    border-radius: 12px;
     margin: 4px 2px;
     cursor: pointer;
     font-size:24px;
