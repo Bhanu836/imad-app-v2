@@ -44,7 +44,7 @@ app.get('/ui/practice4.js',function(req,res){
 app.get('/ui/prac4.css',function(req,res){
  res.sendFile(path.join(__dirname,'ui','prac4.css'));
 });
-app.get('/test-db', function(req,res){
+app.get('/test', function(req,res){
     pool.query('SELECT * FROM book',function(err,result){
         if(err){
           res.status(500).send(err.toString());  
