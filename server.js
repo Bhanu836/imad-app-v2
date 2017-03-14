@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var qs = require("querystring");
-var pool =require('pg').Pool;
+var Pool =require('pg').Pool;
 var crypto = require('crypto');
 
 
@@ -22,7 +22,8 @@ var config = {
     };
     var app = express();
     app.use(morgan('combined'));
-    var pool = new pool(config);
+    
+    var pool = new Pool(config);
 
 app.get('/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
