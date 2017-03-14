@@ -43,11 +43,37 @@ app.get('/ui/prac4.css',function(req,res){
 });
  function hash(input,salt){
      var hashed = crypto.pbkdf2Sync(input,salt,1000,512,'sha512');
-     return hashed.toString('hex');
+     return ["pbkdf2","1000",salt,hashed.toString('hex')].join('$');
  }
 app.get('/hash/:input' , function(req,res){
     var hashstring =hash(req.params.input,'some-random-string');
     res.send(hashstring);
+    
+});
+app.post('/login' , function(req,res)
+{
+     var username = req.body.username;
+    var password = req.body.password;
+    
+   pool.query('SELECT * FROM "user" WHERE username = $1',[username], function(err,result){
+       if(err)
+       {
+           res.status.send(err.toString());
+       }else{
+          if(result.rows.length === 0){
+              res.send(403).send("no username exist");
+          }else{
+              var dbstring = result.rows[0].password;
+              dbstring.split('$')[2];
+              var hashedPassword = hash(password,salt);
+              if(hashedPassword === dbstring){
+                  res.send('you are logged in');
+              }else{
+                  res.send(403).send("username is invalid");
+              }
+          }
+       }
+   });
     
 });
 app.post('/create-user',function(req,res){
