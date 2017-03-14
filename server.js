@@ -13,9 +13,10 @@ var bodyParser = require('body-parser');
 
 
 var config = {
-     user: 'bhanu836',
+     
      database :'bhanu836',
      host: 'db.imad.hasura.app.io',
+     user: 'bhanu836',
      port: '5432',
      password : process.env.DB_PASSWORD
       };
@@ -26,7 +27,7 @@ var config = {
     
   var pool = new Pool(config);
 app.get('/test-db', function(req,res){
-    pool.query('SELECT * FROM book',function(err,result){
+    pool.query('SELECT * FROM test',function(err,result){
         if(err){
           res.status(500).send(err.toString());  
         }else{
