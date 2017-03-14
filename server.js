@@ -24,7 +24,16 @@ var config = {
     var app = express();
     app.use(morgan('combined'));
     
-   
+  var pool = new Pool(config);
+app.get('/test-db', function(req,res){
+    pool.query('SELECT * FROM book',function(err,result){
+        if(err){
+          res.status(500).send(err.toString());  
+        }else{
+            res.send(JSON.stringify(result));
+        }
+    });
+}); 
 
 app.get('/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -46,16 +55,7 @@ app.get('/ui/practice4.js',function(req,res){
 app.get('/ui/prac4.css',function(req,res){
  res.sendFile(path.join(__dirname,'ui','prac4.css'));
 });
- var pool = new Pool(config);
-app.get('/test', function(req,res){
-    pool.query('SELECT * FROM book',function(err,result){
-        if(err){
-          res.status(500).send(err.toString());  
-        }else{
-            res.send(JSON.stringify(result));
-        }
-    });
-});
+ 
 
 app.use(bodyParser.json());
 
