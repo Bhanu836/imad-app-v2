@@ -5,8 +5,11 @@ var qs = require("querystring");
 var pool =require('pg').Pool;
 var crypto = require('crypto');
 var app = express();
+var bodyParser = require('body-parser');
 app.use(morgan('combined'));
 
+
+app.use(bodyParser.json());
 
 var config = {
     user: 'bhanu836',
@@ -46,6 +49,20 @@ app.get('/hash/:input' , function(req,res){
     var hashstring =hash(req.params.input,'some-random-string');
     res.send(hashstring);
     
+});
+app.post('/create-user',function(req,res){
+    var username = req.body.username;
+    var password = req.body.password;
+    var salt =crypto.getRandomBytes(128).toString('hex');
+   var dbstring = hash(password,salt);
+   pool.query('INSERT INTO "user"(username,password) VALUES ($1,$2)',[username,dbstring], function(err,result){
+       if(err)
+       {
+           res.status.send(err.toString());
+       }else{
+           res.user('user successful' + username);
+       }
+   });
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
