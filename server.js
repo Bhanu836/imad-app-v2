@@ -12,8 +12,9 @@ var bodyParser = require('body-parser');
 
 
 
-var config = {
-     
+var config = 
+
+{
      database :'bhanu836',
      host: 'db.imad.hasura.app.io',
      user: 'bhanu836',
