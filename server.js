@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 app.use(morgan('combined'));
 
 
-app.use(bodyParser.json());
+
 
 var config = {
     user: 'bhanu836',
@@ -41,6 +41,7 @@ app.get('/ui/practice4.js',function(req,res){
 app.get('/ui/prac4.css',function(req,res){
  res.sendFile(path.join(__dirname,'ui','prac4.css'));
 });
+app.use(bodyParser.json());
  function hash(input,salt){
      var hashed = crypto.pbkdf2Sync(input,salt,1000,512,'sha512');
      return ["pbkdf2","1000",salt,hashed.toString('hex')].join('$');
