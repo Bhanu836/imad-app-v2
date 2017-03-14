@@ -5,6 +5,7 @@ var qs = require("querystring");
 var pool =require('pg').Pool;
 var crypto = require('crypto');
 var app = express();
+
 var bodyParser = require('body-parser');
 app.use(morgan('combined'));
 
@@ -42,9 +43,10 @@ app.get('/ui/prac4.css',function(req,res){
  res.sendFile(path.join(__dirname,'ui','prac4.css'));
 });
 app.use(bodyParser.json());
+
  function hash(input,salt){
      var hashed = crypto.pbkdf2Sync(input,salt,1000,512,'sha512');
-     return ["pbkdf2","1000",salt,hashed.toString('hex')].join('$');
+     return ["pbkdf2","1000",salt, hashed.toString('hex')].join('$');
  }
 app.get('/hash/:input' , function(req,res){
     var hashstring =hash(req.params.input,'some-random-string');
@@ -80,9 +82,9 @@ app.post('/login' , function(req,res)
 app.post('/create-user',function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-    var salt =crypto.getRandomBytes(128).toString('hex');
+    var salt = crypto.getRandomBytes(128).toString('hex');
    var dbstring = hash(password,salt);
-   pool.query('INSERT INTO "user"(username,password) VALUES ($1,$2)',[username,dbstring], function(err,result){
+   pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)',[username,dbstring], function(err,result){
        if(err)
        {
            res.status.send(err.toString());
