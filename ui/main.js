@@ -24,7 +24,9 @@ submit.onClick = function(){
      };
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value; 
+  console.log(usrname);
 request.open('POST', 'http://bhanu836.imad.hasura-app.io/login',true);
+request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username , password:password}));
     
     
