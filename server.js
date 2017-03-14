@@ -45,6 +45,16 @@ app.get('/ui/practice4.js',function(req,res){
 app.get('/ui/prac4.css',function(req,res){
  res.sendFile(path.join(__dirname,'ui','prac4.css'));
 });
+app.get('/test-db', function(req,res){
+    pool.query('SELECT * FROM book',function(err,result){
+        if(err){
+          res.status(500).send(err.toString());  
+        }else{
+            res.send(JSON.stringify(result.rows));
+        }
+    });
+});
+
 app.use(bodyParser.json());
 
  function hash(input,salt){
@@ -95,15 +105,6 @@ app.post('/create-user',function(req,res){
            res.user('user successful' + username);
        }
    });
-});
-app.get('/test-db', function(req,res){
-    pool.query('SELECT * FROM book',function(err,result){
-        if(err){
-          res.status(500).send(err.toString());  
-        }else{
-            res.send(JSON.stringify(result.rows));
-        }
-    });
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
