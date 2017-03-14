@@ -13,11 +13,11 @@ var bodyParser = require('body-parser');
 
 
 var config = {
-    user: 'bhanu836',
+    user:'bhanu836',
     database: 'bhanu836',
     host: 'db.imad.hasura-app.io',
     port:'5432',
-    password: process.env.DB_PASSWORD
+    password: db-bhanu836-7434
      };
     var app = express();
     app.use(morgan('combined'));
