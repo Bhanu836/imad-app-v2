@@ -4,10 +4,10 @@ var path = require('path');
 var qs = require("querystring");
 var pool =require('pg').Pool;
 var crypto = require('crypto');
-var app = express();
+
 
 var bodyParser = require('body-parser');
-app.use(morgan('combined'));
+
 
 
 
@@ -20,6 +20,8 @@ var config = {
     password: process.env.DB_PASSWORD,
     
     };
+    var app = express();
+    app.use(morgan('combined'));
     var pool = new pool(config);
 
 app.get('/index.html', function (req, res) {
