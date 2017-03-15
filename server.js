@@ -12,12 +12,10 @@ var bodyParser = require('body-parser');
 
 
 
-var config = 
-
-{
+var config = {    
+    user: 'bhanu836',
      database :'bhanu836',
      host: 'db.imad.hasura.app.io',
-     user: 'bhanu836',
      port: '5432',
      password : process.env.DB_PASSWORD
       };
@@ -33,6 +31,7 @@ app.get('/test-db', function(req,res){
           res.status(500).send(err.toString());  
         }else{
             res.send(JSON.stringify(result));
+            console.log(result);
         }
     });
 }); 
