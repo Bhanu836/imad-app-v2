@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var submit = document.getElementById('submit_btn');
-submit.onClick = function(){
+submit.onclick = function(){
     console.log(username);
      var request = new XMLHttpRequest();
      
@@ -34,7 +34,7 @@ request.send(JSON.stringify({username:username , password:password}));
 };
 var sub = document.getElementById('register_btn');
 var username = document.getElementById('username').value;
-sub.onClick = function(){
+sub.onclick = function(){
      var request = new XMLHttpRequest();
      console.log(username);
      reuest.onreadystatechange = function(){
