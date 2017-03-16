@@ -31,8 +31,8 @@ request.send(JSON.stringify({username:username , password:password}));
     
     
 };
-var submit = document.getElementById('register_btn');
-submit.onClick = function(){
+var sub = document.getElementById('register_btn');
+sub.onClick = function(){
      var request = new XMLHttpRequest();
      
      reuest.onreadystatechange = function(){
@@ -42,9 +42,7 @@ submit.onClick = function(){
              alert('registered');
              
          }
-         else if(request.status === 403){
-             alert('wrong password');
-         }
+         
          
          else if(request.status === 500)
          {
