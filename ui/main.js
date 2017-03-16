@@ -32,9 +32,10 @@ request.send(JSON.stringify({username:username , password:password}));
     
 };
 var sub = document.getElementById('register_btn');
+var username = document.getElementById('username').value;
 sub.onClick = function(){
      var request = new XMLHttpRequest();
-     
+     console.log(username);
      reuest.onreadystatechange = function(){
          if(request.readystate === XMLHttpRequest.DONE){
          
@@ -52,7 +53,7 @@ sub.onClick = function(){
      }
          
      };
-  var username = document.getElementById('username').value;
+  
   var password = document.getElementById('password').value; 
   console.log(username);
 request.open('POST', 'http://bhanu836.imad.hasura-app.io/create-user',true);
