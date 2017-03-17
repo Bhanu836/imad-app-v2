@@ -4,7 +4,7 @@ submit.onclick = function(){
     console.log(username);
      var request = new XMLHttpRequest();
      
-     reuest.onreadystatechange = function(){
+     request.onreadystatechange = function(){
          if(request.readystate == XMLHttpRequest.DONE){
          
          if(request.status == 200){
