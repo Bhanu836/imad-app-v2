@@ -8,16 +8,16 @@ submit.onclick = function(){
          if(request.readystate == XMLHttpRequest.DONE){
          
          if(request.status == 200){
-             alert('logged in');
+             alert("logged in");
              
          }
          else if(request.status == 403){
-             alert('wrong password');
+             alert("wrong password");
          }
          
          else if(request.status == 500)
          {
-             alert('something went wrong');
+             alert("something went wrong");
          
          }
      }
@@ -26,6 +26,7 @@ submit.onclick = function(){
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value; 
   console.log(username);
+  console.log(password);
 request.open('POST', 'http://bhanu836.imad.hasura-app.io/login',true);
 request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username , password:password}));
@@ -42,14 +43,14 @@ sub.onclick = function(){
          if(request.readystate === XMLHttpRequest.DONE){
          
          if(request.status === 200){
-             alert('registered');
+             alert("registered");
              
          }
          
          
          else if(request.status === 500)
          {
-             alert('something went wrong');
+             alert("something went wrong");
          
          }
      }
