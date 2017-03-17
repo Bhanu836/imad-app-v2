@@ -93,7 +93,7 @@ app.post('/login', function(req,res)
              var salt = dbstring.split('$')[2];
               var hashedPassword = hash(password,salt);
               if(hashedPassword === dbstring){
-                  req.session.outh={userid:result.rows[0].id};
+                  req.session.outh={userid:result.rows[0].id ,username:result.rows[0].username};
                   res.send('you are logged in');
               }else{
                   res.send(403).send("username is invalid");
@@ -121,7 +121,7 @@ app.post('/create-user', function(req,res){
 
 app.get('/check-login',function(req,res){
    if(req.session && req.session.outh && req.session.outh.userid) {
-       res.send("user is is loggedin :" + req.session.outh.userid.toString());
+       res.send("user  is logged in :" + req.session.outh.userid.toString()+"as" + req.session.outh.username.toString());
    }
 });
 app.get('/logout',function(req,res){
