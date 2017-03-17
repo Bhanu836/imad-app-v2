@@ -121,8 +121,12 @@ app.post('/create-user', function(req,res){
 
 app.get('check-login',function(req,res){
    if(req.session && req.session.outh && req.session.outh.userid) {
-       res.send("user is is loggedin :" + userid);
+       res.send("user is is loggedin :" + req.session.outh.userid.toString());
    }
+});
+app.get('logout',function(req,res){
+   delete req.session.outh;
+   res.send("you are logged out");
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
