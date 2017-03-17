@@ -37,16 +37,16 @@ var username = document.getElementById('username').value;
 sub.onclick = function(){
      var request = new XMLHttpRequest();
      console.log(username);
-     reuest.onreadystatechange = function(){
-         if(request.readystate ==XMLHttpRequest.DONE){
+     request.onreadystatechange = function(){
+         if(request.readystate === XMLHttpRequest.DONE){
          
-         if(request.status == 200){
+         if(request.status === 200){
              alert('registered');
              
          }
          
          
-         else if(request.status == 500)
+         else if(request.status === 500)
          {
              alert('something went wrong');
          
