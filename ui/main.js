@@ -30,7 +30,7 @@ submit.onclick = function(){
 request.open('POST', 'http://bhanu836.imad.hasura-app.io/login',true);
 request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username , password:password}));
-    
+password = " ";    
     
 };
 var sub = document.getElementById('register_btn');
