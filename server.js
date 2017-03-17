@@ -4,7 +4,7 @@ var path = require('path');
 var qs = require("querystring");
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
-
+var session = require('express-session');
 
 var bodyParser = require('body-parser');
 
@@ -36,6 +36,10 @@ app.get('/test-db', function(req,res){
     });
 }); 
 
+app.use(session({
+    secret:'blackdugsecret',
+    cookie:{maxage:1000*60*60*24*30}
+}));
 app.get('/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -89,6 +93,7 @@ app.post('/login', function(req,res)
              var salt = dbstring.split('$')[2];
               var hashedPassword = hash(password,salt);
               if(hashedPassword === dbstring){
+                  req.session.outh={userid:result.rows[0].id};
                   res.send('you are logged in');
               }else{
                   res.send(403).send("username is invalid");
@@ -112,6 +117,12 @@ app.post('/create-user', function(req,res){
            res.send('user successful' + username);
        }
    });
+});
+
+app.get('check-login',function(req,res){
+   if(req.session && req.session.outh && req.session.outh.userid) {
+       res.send("user is is loggedin :" + userid);
+   }
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
