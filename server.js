@@ -72,21 +72,21 @@ app.get('/hash/:input' , function(req,res){
     res.send(hashstring);
     
 });
-app.post('/login' , function(req,res)
+app.post('/login', function(req,res)
 {
      var username = req.body.username;
     var password = req.body.password;
-    
+    console.log(username);
    pool.query('SELECT * FROM "user" WHERE username = $1',[username], function(err,result){
        if(err)
        {
            res.status(500).send(err.toString());
        }else{
           if(result.rows.length === 0){
-              res.send(403).send("no username exist");
+              res.status(403).send("no username exist");
           }else{
               var dbstring = result.rows[0].password;
-              dbstring.split('$')[2];
+             var salt = dbstring.split('$')[2];
               var hashedPassword = hash(password,salt);
               if(hashedPassword === dbstring){
                   res.send('you are logged in');
