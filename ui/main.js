@@ -5,17 +5,17 @@ submit.onclick = function(){
      var request = new XMLHttpRequest();
      
      reuest.onreadystatechange = function(){
-         if(request.readystate === XMLHttpRequest.DONE){
+         if(request.readystate == XMLHttpRequest.DONE){
          
-         if(request.status === 200){
+         if(request.status == 200){
              alert('logged in');
              
          }
-         else if(request.status === 403){
+         else if(request.status == 403){
              alert('wrong password');
          }
          
-         else if(request.status === 500)
+         else if(request.status == 500)
          {
              alert('something went wrong');
          
@@ -38,15 +38,15 @@ sub.onclick = function(){
      var request = new XMLHttpRequest();
      console.log(username);
      reuest.onreadystatechange = function(){
-         if(request.readystate === XMLHttpRequest.DONE){
+         if(request.readystate ==XMLHttpRequest.DONE){
          
-         if(request.status === 200){
+         if(request.status == 200){
              alert('registered');
              
          }
          
          
-         else if(request.status === 500)
+         else if(request.status == 500)
          {
              alert('something went wrong');
          
