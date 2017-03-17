@@ -33,8 +33,9 @@ request.send(JSON.stringify({username:username , password:password}));
     
 };
 var sub = document.getElementById('register_btn');
-var username = document.getElementById('username').value;
+
 sub.onclick = function(){
+    var usernamek = document.getElementById('username').value;
      var request = new XMLHttpRequest();
      console.log(username);
      request.onreadystatechange = function(){
