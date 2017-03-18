@@ -35,6 +35,7 @@ request.send(JSON.stringify({username:username , password:password}));
 };
 var sub = document.getElementById('register_btn');
 var regdiv = document.getElementById('mess');
+var regdiv2 = document.getElementById('mess2');
 sub.onclick = function(){
     var username = document.getElementById('username').value;
      var request = new XMLHttpRequest();
@@ -46,7 +47,8 @@ sub.onclick = function(){
          if(request.status === 200){
              alert("registered");
              
-             regdiv.innerHTML =" registered";
+             regdiv.innerHTML =" stu registered you";
+             regdiv2.innerHTML = " you are loged in as" +" " + username;
              
          }
          
