@@ -34,7 +34,7 @@ password = " ";
     
 };
 var sub = document.getElementById('register_btn');
-
+var regdiv = document.getElementById('message');
 sub.onclick = function(){
     var username = document.getElementById('username').value;
      var request = new XMLHttpRequest();
@@ -42,11 +42,11 @@ sub.onclick = function(){
      request.onreadystatechange = function(){
          if(request.readystate === XMLHttpRequest.DONE){
          
-         if(request.status === 200 && request.readystate === 4){
+         if(request.status === 200){
              alert("registered");
-             var regdiv = document.getElementById('message');
              
-             regdiv.innerHTML ="you are registered  as" + "  " + username;
+             
+             regdiv.innerHTML = "you are registered  as" + "  " + username;
          }
          
          
