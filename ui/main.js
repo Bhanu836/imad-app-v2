@@ -53,12 +53,7 @@ request.send(JSON.stringify({username:username , password:password}));
          }
          
          
-         else if(request.status === 500)
-         {
-             alert("something went wrong");
-         
-         }
-     
+        
          
      };
   
