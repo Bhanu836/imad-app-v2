@@ -34,7 +34,7 @@ password = " ";
     
 };
 var sub = document.getElementById('register_btn');
-var regdiv = document.getElementById('message');
+var regdiv = document.getElementById('mess');
 sub.onclick = function(){
     var username = document.getElementById('username').value;
      var request = new XMLHttpRequest();
