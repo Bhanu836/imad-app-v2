@@ -43,7 +43,7 @@ sub.onclick = function(){
     
      request.onreadystatechange = function(){
                  
-         if(request.readystate === XMLHttpRequest.DONE && request.status === 200){
+         if(request.readystate === XMLHttpRequest.DONE){
              alert("registered");
              
              regdiv.innerHTML =" registered";
