@@ -37,7 +37,7 @@ request.send(JSON.stringify({username:username , password:password}));
 };
 var sub = document.getElementById('register_btn');
 var regdiv = document.getElementById('mess');
-var regdiv2 = document.getElementById('mess2');
+
 sub.onclick = function(){
     var username = document.getElementById('username').value;
      var request = new XMLHttpRequest();
