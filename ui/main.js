@@ -1,14 +1,16 @@
 console.log('Loaded!');
+var regdiv2 = document.getElementById('mess2');
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
      var request = new XMLHttpRequest();
      
      request.onreadystatechange = function(){
-         if(request.readystate == XMLHttpRequest.DONE){
+        
          
          if(request.status == 200){
              alert("logged in");
+              regdiv2.innerHTML = " you are loged in as" +" " + username;
              
          }
          else if(request.status == 403){
@@ -20,7 +22,7 @@ submit.onclick = function(){
              alert("something went wrong");
          
          }
-     }
+     
          
      };
   var username = document.getElementById('username').value;
@@ -48,7 +50,7 @@ sub.onclick = function(){
              alert("registered");
              
              regdiv.innerHTML =" stu registered you";
-             regdiv2.innerHTML = " you are loged in as" +" " + username;
+             regdiv2.innerHTML = " you are registered as" +" " + username;
              
          }
          
