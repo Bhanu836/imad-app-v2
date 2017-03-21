@@ -128,6 +128,11 @@ app.get('/check-login',function(req,res){
    if(req.session && req.session.outh && req.session.outh.userid) {
        res.send("user  is logged in :" + req.session.outh.userid.toString()+"as");
    }
+   else{
+   
+       
+   res.send("error");
+   }
 });
 app.get('/logout',function(req,res){
    delete req.session.outh;
