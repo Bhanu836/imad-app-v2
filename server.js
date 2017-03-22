@@ -126,7 +126,7 @@ app.post('/create-user', function(req,res){
 
 app.get('/check-login',function(req,res){
    if(req.session && req.session.outh && req.session.outh.userid) {
-       res.send("user  is logged in :" + req.session.outh.userid.toString()+"as");
+       res.send("user  is logged in :");
    }
    else{
    
