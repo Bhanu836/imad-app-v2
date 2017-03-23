@@ -119,8 +119,8 @@ app.post('/login', function(req,res)
     
 });
 app.get('/check-login',function(req,res){
-   if(req.session) {
-       res.send("user  is logged in ");
+   if(req.session && req.session.outh && req.session.outh.userid ) {
+       res.send("user  is logged in " +"  " + req.session.outh.userid.toString() + req.session.outh.username.toString());
    }
    else{
    
