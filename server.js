@@ -225,7 +225,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.outh && req.session.outh.userid) {
         // First check if the article exists and get the article-id
-        var qid = req.params.articleName;
+        var qid = req.params.articleName.toString();
         pool.query('SELECT * FROM article WHERE title = $1', [qid], function (err, result) {
             if (err) {
                 res.status(500).send(err.toString());
