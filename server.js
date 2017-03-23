@@ -67,6 +67,9 @@ app.get('/ui/practice4.js',function(req,res){
 app.get('/ui/main.js',function(req,res){
  res.sendFile(path.join(__dirname,'ui','main.js'));
 });
+app.get('/ui/article.js',function(req,res){
+ res.sendFile(path.join(__dirname,'ui','article.js'));
+});
 app.get('/ui/prac4.css',function(req,res){
  res.sendFile(path.join(__dirname,'ui','prac4.css'));
 });
