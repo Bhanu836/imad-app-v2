@@ -21,10 +21,10 @@
             <h3>My Articles</h3>
             <div id="articles">
                 <div>
-            <span> article title</span>
+            <span> article </span>
             <input type="text" id="title" placeholder="title" />
-             <input type="password" id="heading" placeholder="heading" />
-             <input type="password" id="content" placeholder="content" />
+             <input type="text" id="heading" placeholder="heading" />
+             <input type="text" id="content" placeholder="content" />
              <button type="submit"  id="article_btn" > submit </button></div>
                 <center>Loading articles...</center>
             </div>
@@ -33,6 +33,48 @@
         </div>
         
          <script type="text/javascript" src="/ui/article.js">
+        </script>
+        <script>
+            
+var subarticle = document.getElementById('article_btn');
+subarticle.onclick = function(){
+   
+     var request = new XMLHttpRequest();
+     
+    
+    
+     request.onreadystatechange = function(){
+                 
+         if(request.status === 200){
+             alert("submitted");
+             
+             
+             
+         }
+         
+          else if(request.readystate === XMLHttpRequest.DONE && request.status === 500)
+         {
+             alert("something went wrong");
+         
+         }
+     
+        
+         
+     };
+      var title = document.getElementById('title').value;
+     var content = document.getElementById('content').value;
+     var heading = document.getElementById('heading').value;
+     
+   request.open('POST', 'http://bhanu836.imad.hasura-app.io/articledata',true);
+     request.setRequestHeader('Content-Type','application/json');
+request.send(JSON.stringify({title:title , heading:heading ,content:content}));
+  
+  
+
+
+    
+};
+
         </script>
     </body>
 </html>
