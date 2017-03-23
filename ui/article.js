@@ -84,7 +84,7 @@ function loadComments () {
                     </div>`;
                 }
                 comments.innerHTML = content;
-            } else {
+            } else if (request.status !== 200 && request.readyState === XMLHttpRequest.DONE) {
                 comments.innerHTML = 'Oops! Could not load comments!';
             }
         
