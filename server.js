@@ -106,10 +106,9 @@ app.post('/login', function(req,res)
              var salt = dbstring.split('$')[2];
               var hashedPassword = hash(password,salt);
               if(hashedPassword === dbstring){
-                  req.session.outh={userid:result.rows[0].id ,username:result.rows[0].username};
+                  req.session.outh = {userid:result.rows[0].id ,username:result.rows[0].username};
                   console.log(req.session.outh.username);
-                  res.set('Content-Type', 'text/html');
-                  res.send(new Buffer('<p>you are logged in</p>'));
+                 
                   res.send('<p>you are logged in</p>');
               }else{
                   res.send(403).send("username is invalid");
