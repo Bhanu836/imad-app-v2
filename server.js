@@ -109,7 +109,7 @@ app.post('/login', function(req,res)
                   req.session.outh = {userid:result.rows[0].id ,username:result.rows[0].username};
                   console.log(req.session.outh.username);
                  
-                  res.send('<p>you are logged in</p>');
+                  res.send('you are logged in');
               }else{
                   res.send(403).send("username is invalid");
               }
