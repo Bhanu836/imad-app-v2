@@ -1,8 +1,7 @@
 console.log('Loaded!');
 var regdiv2 = document.getElementById('mess2');
 var submit = document.getElementById('submit_btn');
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value; 
+  
 submit.onclick = function(){
     
      var request = new XMLHttpRequest();
@@ -30,6 +29,8 @@ submit.onclick = function(){
 
   console.log(username);
   console.log(password);
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value; 
 request.open('POST', 'http://bhanu836.imad.hasura-app.io/login',true);
 request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username , password:password}));
