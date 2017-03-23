@@ -11,8 +11,8 @@ function loadCommentForm () {
     document.getElementById('comment_form').innerHTML = commentFormHtml;
     
     // Submit username/password to login
-    var submit2 = document.getElementById('submit');
-    submit2.onclick = function () {
+    var submit = document.getElementById('submit');
+    submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
         
@@ -27,7 +27,7 @@ function loadCommentForm () {
                 } else {
                     alert('Error! Could not submit comment');
                 }
-                submit2.value = 'Submit';
+                submit.value = 'Submit';
           }
         };
         
