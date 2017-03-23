@@ -223,7 +223,7 @@ app.get('/get-comments/:articleName', function (req, res) {
 });
 app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
-    if (req.session && req.session.outh && req.session.outh.userId) {
+    if (req.session && req.session.outh && req.session.outh.userid) {
         // First check if the article exists and get the article-id
         pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
             if (err) {
