@@ -92,46 +92,6 @@ function loadComments () {
     request.open('GET', '/get-comments/' + currentArticleTitle, true);
     request.send(null);
 }
-var subarticle = document.getElementById('article_btn');
-
-
-subarticle.onclick = function(){
-   
-     var request = new XMLHttpRequest();
-     console.log(title);
-    
-    
-     request.onreadystatechange = function(){
-                 
-         if(request.status === 200){
-             alert("submitted");
-             
-             
-             
-         }
-         
-          else if(request.readystate === XMLHttpRequest.DONE && request.status === 500)
-         {
-             alert("something went wrong");
-         
-         }
-     
-        
-         
-     };
-      var title = document.getElementById('title').value;
-     var content = document.getElementById('content').value;
-     var heading = document.getElementById('heading').value;
-     
-   request.open('POST', 'http://bhanu836.imad.hasura-app.io/articledata',true);
-     request.setRequestHeader('Content-Type','application/json');
-request.send(JSON.stringify({title:title , heading:heading ,content:content}));
-  
-  
-
-
-    
-};
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
