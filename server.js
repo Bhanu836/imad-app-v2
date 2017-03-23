@@ -223,10 +223,14 @@ app.get('/get-comments/:articleName', function (req, res) {
 });
 app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
+   console.log('a');
     if (req.session && req.session.outh && req.session.outh.userid) {
         // First check if the article exists and get the article-id
-        var qid = req.params.articleName.toString();
+         console.log('aa');
+        var qid = req.params.articleName;
         pool.query('SELECT * FROM article WHERE title = $1', [qid], function (err, result) {
+             var articleId = result.rows[0].id;
+                    console.log('articleId');
             if (err) {
                 res.status(500).send(err.toString());
             } else {
@@ -234,6 +238,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                     res.status(400).send('Article not found');
                 } else {
                     var articleId = result.rows[0].id;
+                    console.log('articleId');
                     var comment= req.body.comment;
                     var userid = req.session.outh.userid.toString();
                     // Now insert the right comment for this article
