@@ -40,6 +40,7 @@ app.use(session({
     secret:'blackdugsecret',
     cookie:{maxage:1000*60*60*24*30}
 }));
+
 app.get('/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -80,15 +81,7 @@ app.get('/hash/:input' , function(req,res){
     
 });
 
-app.get('/check-login',function(req,res){
-   if(req.session && req.session.outh && req.session.outh.userid) {
-       res.send("user  is logged in :");
-   }
-   else{
-   
-       
-   res.send("error");
-   }
+
 });
 app.use(bodyParser.json());
 
@@ -122,6 +115,15 @@ app.post('/login', function(req,res)
    });
     
 });
+app.get('/check-login',function(req,res){
+   if(req.session && req.session.outh && req.session.outh.userid) {
+       res.send("user  is logged in :");
+   }
+   else{
+   
+       
+   res.send("error");
+   }
 app.post('/create-user', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
