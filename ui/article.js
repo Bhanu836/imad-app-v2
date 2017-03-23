@@ -47,7 +47,7 @@ function loadLogin () {
     request.onreadystatechange = function () {
         
             if (request.status === 200) {
-                loadCommentForm(this.responseText);
+                loadCommentForm();
             }
         
     };
