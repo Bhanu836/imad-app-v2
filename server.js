@@ -126,7 +126,10 @@ app.get('/check-login',function(req,res){
    
        
    res.send("error");
-   }
+   } 
+    
+});
+   
 app.post('/create-user', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
@@ -179,7 +182,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
-                                res.status(200).send('Comment inserted!')
+                                res.status(200).send('Comment inserted!');
                             }
                         });
                 }
