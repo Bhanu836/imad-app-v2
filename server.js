@@ -230,7 +230,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
         var qid = req.params.articleName;
         pool.query('SELECT * FROM article WHERE title = $1', [qid], function (err, result) {
              var articleId = result.rows[0].id;
-                    console.log('articleId');
+                    console.log(articleId);
             if (err) {
                 res.status(500).send(err.toString());
             } else {
@@ -238,8 +238,9 @@ app.post('/submit-comment/:articleName', function (req, res) {
                     res.status(400).send('Article not found');
                 } else {
                     var articleId = result.rows[0].id;
-                    console.log('articleId');
+                    console.log(articleId);
                     var comment= req.body.comment;
+                    console.log(comment);
                     var userid = req.session.outh.userid.toString();
                     // Now insert the right comment for this article
                     pool.query(
