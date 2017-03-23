@@ -68,7 +68,7 @@ app.get('/ui/prac4.css',function(req,res){
 });
  
 
-app.use(bodyParser.json());
+
 
  function hash(input,salt){
      var hashed = crypto.pbkdf2Sync(input,salt,1000,512,'sha512');
@@ -79,6 +79,20 @@ app.get('/hash/:input' , function(req,res){
     res.send(hashstring);
     
 });
+
+app.get('/check-login',function(req,res){
+   if(req.session && req.session.outh && req.session.outh.userid) {
+       res.send("user  is logged in :");
+   }
+   else{
+   
+       
+   res.send("error");
+   }
+});
+app.use(bodyParser.json());
+
+
 app.post('/login', function(req,res)
 {
      var username = req.body.username;
@@ -124,16 +138,7 @@ app.post('/create-user', function(req,res){
    });
 });
 
-app.get('/check-login',function(req,res){
-   if(req.session && req.session.outh && req.session.outh.userid) {
-       res.send("user  is logged in :");
-   }
-   else{
-   
-       
-   res.send("error");
-   }
-});
+
 app.get('/logout',function(req,res){
    delete req.session.outh;
    res.send("you are logged out");
@@ -196,9 +201,6 @@ app.get('/articles/:articleName', function (req, res) {
   });
 });
 
-app.get('/ui/:fileName', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
-});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
