@@ -136,7 +136,7 @@ app.post('/articledata',function(req,res){
     var title= req.body.title;
     var heading = req.body.heading;
     var content = req.body.content;
-   pool.query('INSERT INTO "article" (title,heading,date,content) VALUES ($1,$2,$3,$4)',[title,heading,DEFAULT,content], function(err,result){  
+   pool.query('INSERT INTO "article" (title,heading,content) VALUES ($1,$2,$4)',[title,heading,content], function(err,result){  
         if(err)
        {
            res.status(500).send(err.toString());
