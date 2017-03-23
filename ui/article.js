@@ -23,7 +23,7 @@ function loadCommentForm () {
                 if (request.status === 200) {
                     // clear the form & reload all the comments
                     console.log("hello");
-                    document.getElementById('comment_text').value = '';
+                   
                     loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
@@ -37,7 +37,7 @@ function loadCommentForm () {
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
-        submit2.value = 'Submitting...';
+       
         
     };
 }
