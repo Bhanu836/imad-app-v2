@@ -20,16 +20,16 @@ function loadCommentForm () {
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
                 // Take some action
-                if (request.status === 200) {
+                
                     // clear the form & reload all the comments
                     console.log("hello");
                    
                     loadComments();    
-                } else {
+                } else if (request.status === 500 && request.readyState === XMLHttpRequest.DONE ){
                     alert('Error! Could not submit comment');
                 }
                 submit2.value = 'Submit';
-          }
+          
         };
         
         // Make the request
@@ -96,4 +96,3 @@ function loadComments () {
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
-loadComments();
