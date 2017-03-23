@@ -45,11 +45,11 @@ function loadLogin () {
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
+        
             if (request.status === 200) {
                 loadCommentForm(this.responseText);
             }
-        }
+        
     };
     
     request.open('GET', '/check-login', true);
@@ -68,7 +68,7 @@ function loadComments () {
         // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
+      
             var comments = document.getElementById('comments');
             if (request.status === 200) {
                 var content = '';
@@ -86,7 +86,7 @@ function loadComments () {
             } else {
                 comments.innerHTML('Oops! Could not load comments!');
             }
-        }
+        
     };
     
     request.open('GET', '/get-comments/' + currentArticleTitle, true);
