@@ -9,7 +9,7 @@ function loadCommentForm () {
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
-    
+    var comment = document.getElementById('comment_text').value;
     // Submit username/password to login
     var submit2 = document.getElementById('submit2');
     submit2.onclick = function () {
@@ -33,7 +33,7 @@ function loadCommentForm () {
         };
         
         // Make the request
-        var comment = document.getElementById('comment_text').value;
+        
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment:comment}));  
