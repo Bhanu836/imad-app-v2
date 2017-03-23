@@ -18,7 +18,7 @@ function loadCommentForm () {
         
         // Capture the response and store it in a variable
         request.onreadystatechange = function () {
-          
+          if (request.readyState === XMLHttpRequest.DONE) {
                 // Take some action
                 if (request.status === 200) {
                     // clear the form & reload all the comments
@@ -29,7 +29,7 @@ function loadCommentForm () {
                     alert('Error! Could not submit comment');
                 }
                 submit2.value = 'Submit';
-          
+          }
         };
         
         // Make the request
@@ -96,3 +96,4 @@ function loadComments () {
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
+loadComments();
