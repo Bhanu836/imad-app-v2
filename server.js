@@ -11,7 +11,6 @@ var bodyParser = require('body-parser');
 
 
 
-
 var config = {    
      user: 'bhanu836',
      database :'bhanu836',
@@ -23,6 +22,8 @@ var config = {
      
     var app = express();
     app.use(morgan('combined'));
+    app.use(bodyParser.json()); 
+    
     
   var pool = new Pool(config);
 app.get('/test-db', function(req,res){
@@ -38,7 +39,9 @@ app.get('/test-db', function(req,res){
 
 app.use(session({
     secret:'blackdugsecret',
-    cookie:{maxage:1000*60*60*24*30}
+    cookie:{maxage:1000*60*60*24*30},
+    resave: true,
+    saveUninitialized: true
 }));
 
 app.get('/index.html', function (req, res) {
@@ -83,7 +86,7 @@ app.get('/hash/:input' , function(req,res){
 
 
 });
-app.use(bodyParser.json());
+
 
 
 app.post('/login', function(req,res)
