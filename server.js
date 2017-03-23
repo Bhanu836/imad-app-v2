@@ -41,7 +41,7 @@ app.use(session({
     secret:'blackdugsecret',
     cookie:{maxage:1000*60*60*24*30},
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: false
 }));
 
 app.get('/index.html', function (req, res) {
@@ -107,6 +107,7 @@ app.post('/login', function(req,res)
               var hashedPassword = hash(password,salt);
               if(hashedPassword === dbstring){
                   req.session.outh={userid:result.rows[0].id ,username:result.rows[0].username};
+                  console.log(req.session.outh.username);
                   res.set('Content-Type', 'text/html');
                   res.send(new Buffer('<p>you are logged in</p>'));
                   res.send('<p>you are logged in</p>');
