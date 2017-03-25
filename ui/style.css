@@ -44,3 +44,7 @@ input[type=text],[type=number],[type=password],[type=submit]{
 #upper {
   font-size :130%; 
 }
+div{
+font-size :240%;
+    
+}
