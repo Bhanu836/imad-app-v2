@@ -76,7 +76,7 @@ function loadComments () {
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    if(i%2 === 0){content += `<div class="comment">
+                    if(i%2 === 0){content += `<div class="commenteven">
                         <dl>
                        <dt> <span class="commentereven">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
@@ -85,7 +85,7 @@ function loadComments () {
                         </dl>
                     </div><hr />`;
                     }
-                    else if(i%2 !== 0){content += `<div class="comment">
+                    else if(i%2 !== 0){content += `<div class="commentodd">
                         <dl>
                        <dt> <span class="commenterodd">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
