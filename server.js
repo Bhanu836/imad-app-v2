@@ -108,6 +108,7 @@ function createTemplate (data) {
                   <a href="/">Home</a>
               </div>
               <hr/>
+              <h5>${title}</h5>
               <h3>
                   ${heading}
               </h3>
