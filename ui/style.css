@@ -20,7 +20,7 @@ body {
     height: 200px;
 }
 
- input[type=submit] {
+ button[type=submit] {
      width:30%;
     background-color:#058973;
     border: 1px solid black;
