@@ -51,10 +51,11 @@ font-size :140%;
 .commenteven{
     background-color:midnightblue;
     color:white;
-    width:40%;
+    width:35%;
+     margin-left: 10%;
 }
 .commentodd{
-    background-color:black;
+    background-color:violetblue;
     color: white;
     width:35%;
 }
