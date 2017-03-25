@@ -58,7 +58,7 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/',function(req,res){
  res.sendFile(path.join(__dirname,'ui','comment.html'));
 });
-app.get('/ui/comment.html',function(req,res){
+app.get('/ui/practice4.html',function(req,res){
  res.sendFile(path.join(__dirname,'ui','practice4.html'));
 });
 app.get('/ui/practice4.js',function(req,res){
