@@ -49,7 +49,8 @@ font-size :140%;
     
 }
 .commenteven{
-    background-color:white;
+    background-color:midnightblue;
+    color:white;
 }
 .commentodd{
     background-color:black;
