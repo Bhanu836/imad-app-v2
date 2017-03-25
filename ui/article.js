@@ -81,7 +81,7 @@ function loadComments () {
                        <dt> <span class="commentereven">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </span></dt>
-                        <dd><p>${escapeHTML(commentsData[i].comment)}</p></dd>
+                        <dd><p class="commentereven">${escapeHTML(commentsData[i].comment)}</p></dd>
                         </dl>
                     </div><hr />`;
                     }
@@ -90,7 +90,7 @@ function loadComments () {
                        <dt> <span class="commenterodd">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </span></dt>
-                        <dd><p>${escapeHTML(commentsData[i].comment)}</p></dd>
+                        <dd><p class="commenterodd">${escapeHTML(commentsData[i].comment)}</p></dd>
                         </dl>
                     </div><hr />`;
                     }
