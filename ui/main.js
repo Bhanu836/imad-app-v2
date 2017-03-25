@@ -15,7 +15,7 @@ submit.onclick = function(){
              
          }
          else if(request.status == 403){
-             alert("wrong password");
+             alert("wrong password ,note : username is case sensitive");
          }
          
          else if(request.status == 500)
@@ -56,9 +56,9 @@ sub.onclick = function(){
              
          }
          
-          else if(request.readystate === XMLHttpRequest.DONE && request.status === 500)
+          else if(request.status === 500)
          {
-             alert("something went wrong");
+             alert("username must be unique, try another !");
          
          }
      
