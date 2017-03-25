@@ -83,7 +83,7 @@ function loadComments () {
                         </span></dt>
                         <dd><p>${escapeHTML(commentsData[i].comment)}</p></dd>
                         </dl>
-                    </div>`;
+                    </div><hr />`;
                     }
                     else if(i%2 !== 0){content += `<div class="comment">
                         <dl>
@@ -92,7 +92,7 @@ function loadComments () {
                         </span></dt>
                         <dd><p>${escapeHTML(commentsData[i].comment)}</p></dd>
                         </dl>
-                    </div>`;
+                    </div><hr />`;
                     }
                 }
                 comments.innerHTML = content;
