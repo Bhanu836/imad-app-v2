@@ -108,13 +108,13 @@ function createTemplate (data) {
                   <a href="/">Home</a>
               </div>
               <hr/>
-              <h5>${title}</h5>
+              <h6><b>${title}</b></h6>
               <h3>
-                  ${heading}
+                 </i> ${heading}</i>
               </h3>
-              <div>
-                  ${date.toDateString()}
-              </div>
+              <span>
+                  <i>${date.toDateString()}</i>
+              </span>
               <div>
                 ${content}
               </div>
