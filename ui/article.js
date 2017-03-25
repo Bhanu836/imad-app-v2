@@ -3,9 +3,9 @@ var currentArticleTitle = window.location.pathname.split('/')[2];
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
-        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <textarea id="comment_text" rows="5" cols="200" placeholder="Enter your comment here..." style="background-color: lightyellow"></textarea>
         <br/>
-        <input type="submit" id="submit2" value="Submit" />
+        <input type="submit" id="submit2" value="Submit" style=" margin-left: 10%"/>
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
