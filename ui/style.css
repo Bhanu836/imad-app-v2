@@ -20,7 +20,7 @@ body {
     height: 200px;
 }
 
- button[type=submit] {
+ button {
      width:30%;
     background-color:#058973;
     border: 1px solid black;
@@ -31,7 +31,7 @@ body {
     cursor: pointer;
     font-size:24px;
 }
-input[type=text],[type=number]{
+input[type=text],[type=number],[type=password]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
