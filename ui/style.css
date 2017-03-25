@@ -21,7 +21,7 @@ body {
 }
 
  button {
-     width:30%;
+     width:16%;
     background-color:#058973;
     border: 1px solid black;
     color: white;
@@ -32,7 +32,7 @@ body {
     font-size:24px;
 }
 input[type=text],[type=number],[type=password],[type=submit]{
-    width: 32%;
+    width: 22%;
     padding: 12px 20px;
     margin: 8px 0;
   
@@ -42,5 +42,5 @@ input[type=text],[type=number],[type=password],[type=submit]{
       height:100%;
 }
 #upper {
-   
+  font-size :130%; 
 }
