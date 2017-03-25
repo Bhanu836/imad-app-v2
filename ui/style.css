@@ -42,5 +42,5 @@ input[type=text],[type=number],[type=password],[type=submit]{
       height:100%;
 }
 #upper {
-    background-color:#333;
+    background-color:lightyellow;
 }
