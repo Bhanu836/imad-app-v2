@@ -76,14 +76,24 @@ function loadComments () {
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    content += `<div class="comment">
+                    if(i%2 === 0){content += `<div class="comment">
                         <dl>
-                       <dt> <div class="commenter">
+                       <dt> <span class="commentereven">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
-                        </div></dt>
+                        </span></dt>
                         <dd><p>${escapeHTML(commentsData[i].comment)}</p></dd>
                         </dl>
                     </div>`;
+                    }
+                    else if(i%2 !== 0){content += `<div class="comment">
+                        <dl>
+                       <dt> <span class="commenterodd">
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                        </span></dt>
+                        <dd><p>${escapeHTML(commentsData[i].comment)}</p></dd>
+                        </dl>
+                    </div>`;
+                    }
                 }
                 comments.innerHTML = content;
             } else if (request.status !== 200 && request.readyState === XMLHttpRequest.DONE) {
