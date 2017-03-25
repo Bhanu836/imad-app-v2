@@ -48,3 +48,10 @@ div{
 font-size :140%;
     
 }
+#commentereven{
+    background-color:white;
+}
+#commenterodd{
+    background-color:black;
+    color: white;
+}
