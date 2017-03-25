@@ -39,7 +39,7 @@
             </div>
            
         
-        <div id="spaceq">TO LOAD ARTICLES FOR DISCUSSION <button id="articleload_btn" onclick="loadLogin()">Click here</button></div>
+        <div id="spaceq">TO LOAD ARTICLES FOR DISCUSSION <button id="articleload_btn" >Click here</button></div>
         
             <div class="footer">
             </div>
@@ -48,6 +48,10 @@
         </script>
         
         <script>
+        var articleloadbtn = document.getElementById('articleload_btn');
+        articleloadbtn.onclick = function(){
+          loadLogin();  
+        };
             
 var subarticle = document.getElementById('article_btn');
 subarticle.onclick = function(){
