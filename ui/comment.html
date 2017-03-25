@@ -96,7 +96,7 @@ request.send(JSON.stringify({title:title , heading:heading ,content:content}));
                 loadarticle();
             }
         else if(request.status !== 200 ){
-            res.send("login first");
+            console.log("login first")
         }
     };
 
@@ -130,7 +130,7 @@ function loadarticle(){
         
     };
     
-    request.open('GET', '/get-article', true);
+    request.open('GET', '/get-articles', true);
     request.send(null);
 };
         </script>
