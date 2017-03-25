@@ -85,6 +85,7 @@ subarticle.onclick = function(){
    request.open('POST', 'http://bhanu836.imad.hasura-app.io/articledata',true);
      request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({title:title , heading:heading ,content:content}));
+};
   
    function loadLogin () {
     // Check if the user is already logged in
