@@ -120,7 +120,8 @@ function loadarticle(){
                 for (var i=0; i< articleData.length; i++)
                 {
                 articleContent += `<div class="article"><ul><li>
-                            ${articleData[i].id} - ${articleData[i].title} </li> </ul>
+                  <a href="http://bhanu836.imad.hasura-app.io/articles/${articleData[i].title}">
+                            ${articleData[i].id} - ${articleData[i].title}<a> </li> </ul>
                              </div>`;
                         }
                     spaceq.innerHTML = articleContent; 
