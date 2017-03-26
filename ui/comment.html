@@ -49,6 +49,7 @@
         <script>
         var articleloadbtn = document.getElementById('articleload_btn');
         articleloadbtn.onclick = function(){
+            articleloadbtn.innerHTML="loading please wait .......";
           loadLogin();  
         };
             
@@ -93,6 +94,7 @@ request.send(JSON.stringify({title:title , heading:heading ,content:content}));
         
             if (request.status === 200) {
                 loadarticle();
+                 articleloadbtn.innerHTML="load article"
             }
         else if(request.status !== 200 ){
             console.log("login first")
