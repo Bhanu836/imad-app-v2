@@ -49,13 +49,13 @@ font-size :140%;
     
 }
 .commenteven{
- 
+ margin-left: 2%;
     color:chocolate;
     width:35%;
-     margin-left: 10%;
+    
 }
 .commentodd{
-   
+    margin-left: 8%;
     color: brown;
     width:35%;
 }
