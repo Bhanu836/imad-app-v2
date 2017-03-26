@@ -113,7 +113,7 @@ function createTemplate (data) {
                  <i> ${heading}</i>
               </h3>
               <span>
-                  <i>${date.toDateString()}</i>
+                Topic created on -  <i>${date.toDateString()}</i>
               </span>
               <div>
                 ${content}
