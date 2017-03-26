@@ -59,3 +59,9 @@ font-size :140%;
     color: brown;
     width:35%;
 }
+#bodytwo {
+    font-family:Tahoma, Geneva, sans-serif;
+    background-color:#FFF8DC ;
+    margin-top: 45px;
+     margin-left: 5%;
+}
