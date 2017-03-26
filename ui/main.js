@@ -3,7 +3,7 @@ var regdiv2 = document.getElementById('mess2');
 var submit = document.getElementById('submit_btn');
   
 submit.onclick = function(){
-    
+    submit.innerHTML ="loggin in ....";
      var request = new XMLHttpRequest();
      
      request.onreadystatechange = function(){
@@ -12,7 +12,8 @@ submit.onclick = function(){
          if(request.status == 200){
              alert("logged in");
               regdiv2.innerHTML = " you are loged in as" +" " + username;
-             
+              submit.innerHTML ="log in";
+              password = " ";
          }
          else if(request.status == 403){
              alert("wrong password ,note : username is case sensitive");
@@ -42,6 +43,8 @@ var regdiv = document.getElementById('mess');
 
 sub.onclick = function(){
     var username = document.getElementById('username').value;
+  
+    sub.innerHTML ="please wait ....";
      var request = new XMLHttpRequest();
      console.log(username);
     
@@ -50,7 +53,9 @@ sub.onclick = function(){
                  
          if(request.status === 200){
              alert("registered");
-             
+             usernameload.innerHTML ="register";
+             username ="";
+             password ="";
              regdiv.innerHTML =" stu registered you";
              regdiv2.innerHTML = " you are registered as" +" " + username;
              
