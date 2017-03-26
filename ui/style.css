@@ -51,6 +51,9 @@ font-size :120%;
 
     
 }
+#comment{
+     overflow-y:auto;
+}
 .commenteven{
  margin-left: 2%;
     color:chocolate;
