@@ -58,14 +58,14 @@ font-size :120%;
  margin-left: 2%;
     color:chocolate;
     width:35%;
-    overflow-y:auto;
+  
     
 }
 .commentodd{
     margin-left: 10%;
     color: brown;
     width:35%;
-    overflow-y:auto;
+    
 }
 #bodytwo {
     font-family:Tahoma, Geneva, sans-serif;
