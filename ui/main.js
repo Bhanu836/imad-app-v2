@@ -12,7 +12,7 @@ submit.onclick = function(){
          if(request.status == 200){
              alert("logged in");
               regdiv2.innerHTML = " you are loged in as" +" " + username;
-              submit.innerHTML ="log in";
+              submit.innerHTML ="logged in";
               password = " ";
          }
          else if(request.status == 403){
@@ -43,6 +43,7 @@ var regdiv = document.getElementById('mess');
 
 sub.onclick = function(){
     var username = document.getElementById('username').value;
+    var usernamev = document.getElementById('username');
   
     sub.innerHTML ="please wait ....";
      var request = new XMLHttpRequest();
@@ -53,8 +54,8 @@ sub.onclick = function(){
                  
          if(request.status === 200){
              alert("registered");
-             usernameload.innerHTML ="register";
-             username ="";
+             sub.innerHTML ="register";
+             usernamev.value = " ";
              password ="";
              regdiv.innerHTML =" stu registered you";
              regdiv2.innerHTML = " you are registered as" +" " + username;
