@@ -3,7 +3,7 @@ var currentArticleTitle = window.location.pathname.split('/')[2];
 function loadCommentForm () {
     var commentFormHtml = `
         <h6>Submit a comment</h6>
-        <textarea id="comment_text" rows="8" cols="150" placeholder="Enter your comment here..." style="background-color:orange;
+        <textarea id="comment_text" rows="8" cols="150" placeholder="Enter your comment here..." style="background-color:#F0F8FF; border-radius: 8px;
         margin-left:5% ;font-size:120%"></textarea>
         <br/>
         <input type="submit" id="submit2" value="Submit" style=" margin-left: 10%"/>
@@ -15,6 +15,7 @@ function loadCommentForm () {
     var submit2 = document.getElementById('submit2');
     submit2.onclick = function () {
         // Create a request object
+        submit2.innerHTML="submitting ,wait...";
         var request = new XMLHttpRequest();
         
         // Capture the response and store it in a variable
@@ -25,7 +26,8 @@ function loadCommentForm () {
                     // clear the form & reload all the comments
                     console.log("hello");
                    
-                    loadComments();    
+                    loadComments();
+                    submit2.innerHTML="submit more comments";
                 } else if (request.status === 500 && request.readyState === XMLHttpRequest.DONE ){
                     alert('Error! Could not submit comment');
                 }
@@ -68,6 +70,7 @@ function escapeHTML (text)
 
 function loadComments () {
         // Check if the user is already logged in
+        var textareacom = document.getElementById('comment_text');
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
       
@@ -97,6 +100,7 @@ function loadComments () {
                     }
                 }
                 comments.innerHTML = content;
+                textareacom.value =" ";
             } else if (request.status !== 200 && request.readyState === XMLHttpRequest.DONE) {
                 comments.innerHTML = 'Oops! Could not load comments!';
             }
