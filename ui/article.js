@@ -83,7 +83,7 @@ function loadComments () {
                     if(i%2 === 0){content += `<div class="commenteven">
                         <dl>
                        <dt> <span class="commentereven">
-                           <strong> ${commentsData[i].username}</strong> - <i>${time.toLocaleTimeString()} on ${time.toLocaleDateString()}</i> 
+                           <small> ${commentsData[i].username}</small> -<u> <i>${time.toLocaleTimeString()} on ${time.toLocaleDateString()}</i> </u>
                         </span></dt>
                         <dd><p class="commentereven">${escapeHTML(commentsData[i].comment)}</p></dd>
                         </dl>
@@ -92,7 +92,7 @@ function loadComments () {
                     else if(i%2 !== 0){content += `<div class="commentodd">
                         <dl>
                        <dt> <span class="commenterodd">
-                           <strong> ${commentsData[i].username}</strong> - <i>${time.toLocaleTimeString()} on ${time.toLocaleDateString()}</i> 
+                           <small> ${commentsData[i].username}</small> -<u> <i>${time.toLocaleTimeString()} on ${time.toLocaleDateString()}</i> </u>
                         </span></dt>
                         <dd><p class="commenterodd">${escapeHTML(commentsData[i].comment)}</p></dd>
                         </dl>
