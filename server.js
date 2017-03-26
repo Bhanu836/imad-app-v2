@@ -122,7 +122,7 @@ function createTemplate (data) {
               <h4>Comments</h4>
               <div id="comment_form">
               </div>
-              <div id="comments" style="  overflow-y:auto;">
+              <div id="comments" style="overflow: auto">
                 <center>Loading comments...</center>
               </div>
           </div>
