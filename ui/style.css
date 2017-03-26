@@ -46,13 +46,10 @@ input[type=text],[type=number],[type=password],[type=submit]{
 }
 div{
 font-size :120%;
-
-    overflow-y:auto;
-
-    
 }
 #comments{
-     overflow:auto;
+    
+     width:40%;
 }
 .commenteven{
  margin-left: 2%;
