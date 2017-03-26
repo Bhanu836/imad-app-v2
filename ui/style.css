@@ -49,7 +49,7 @@ font-size :120%;
 }
 #comments{
     
-     width:40%;
+     overflow:auto;
 }
 .commenteven{
  margin-left: 2%;
