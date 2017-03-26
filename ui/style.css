@@ -52,7 +52,7 @@ font-size :120%;
     
 }
 #comments{
-     overflow-y:auto;
+     overflow:auto;
 }
 .commenteven{
  margin-left: 2%;
