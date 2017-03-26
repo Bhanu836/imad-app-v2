@@ -55,7 +55,7 @@ font-size :140%;
     
 }
 .commentodd{
-    margin-left: 8%;
+    margin-left: 10%;
     color: brown;
     width:35%;
 }
@@ -63,5 +63,8 @@ font-size :140%;
     font-family:Tahoma, Geneva, sans-serif;
     background-color:#FFF8DC ;
     margin-top: 45px;
-     margin-left: 5%;
+     margin-left: 2%;
+}
+small{
+    color:red;
 }
