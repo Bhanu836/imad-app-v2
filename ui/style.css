@@ -42,10 +42,13 @@ input[type=text],[type=number],[type=password],[type=submit]{
      
 }
 #upper {
-  font-size :130%; 
+  font-size :105%; 
 }
 div{
-font-size :140%;
+font-size :120%;
+
+    overflow-y:auto;
+
     
 }
 .commenteven{
